@@ -15,7 +15,7 @@ mkdir -p "$OUTPUT_DIR"
   --bottleneckRate=10Mbps \
   --bottleneckDelay=10ms \
   --legitTcpRate=3Mbps \
-  --legitPacketSize=1000 \
+  --legitSendSize=1000 \
   --attackRatePerAttacker=5Mbps \
   --attackPacketSize=1000 \
   --legitStart=1.0 \
@@ -27,6 +27,6 @@ mkdir -p "$OUTPUT_DIR"
   --enablePcap=1 \
   --enableFlowMonitor=1"
 
-python3 utils/udp_flood_plot.py --input "$OUTPUT_DIR" --output "$OUTPUT_DIR"
+python3 utils/plot_udp.py --input "$OUTPUT_DIR" --output "$OUTPUT_DIR"
 
 echo "Done. Check $OUTPUT_DIR for CSV, PCAP, XML, and PNG files."
