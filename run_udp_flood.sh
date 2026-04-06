@@ -27,6 +27,6 @@ mkdir -p "$OUTPUT_DIR"
   --enablePcap=1 \
   --enableFlowMonitor=1"
 
-# python3 utils/udp_flood_plot.py --input "$OUTPUT_DIR" --output "$OUTPUT_DIR"
+python3 utils/udp_flood_plot.py --input "$OUTPUT_DIR" --output "$OUTPUT_DIR"
 
 echo "Done. Check $OUTPUT_DIR for CSV, PCAP, XML, and PNG files."
