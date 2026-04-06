@@ -15,6 +15,7 @@ set(source_files
     helper/neighbor-cache-helper.cc
     helper/rip-helper.cc
     helper/ripng-helper.cc
+    helper/tcp-syn-flood-helper.cc
     model/arp-cache.cc
     model/arp-header.cc
     model/arp-l3-protocol.cc
@@ -126,6 +127,8 @@ set(source_files
     model/udp-socket-factory.cc
     model/udp-socket-impl.cc
     model/udp-socket.cc
+    model/tcp-syn-flood-socket.cc
+    model/tcp-syn-flood-factory.cc
 )
 
 set(header_files
@@ -145,6 +148,7 @@ set(header_files
     helper/neighbor-cache-helper.h
     helper/rip-helper.h
     helper/ripng-helper.h
+    helper/tcp-syn-flood-helper.h
     model/arp-cache.h
     model/arp-header.h
     model/arp-l3-protocol.h
@@ -249,6 +253,9 @@ set(header_files
     model/udp-socket-factory.h
     model/udp-socket.h
     model/windowed-filter.h
+    model/tcp-syn-flood-socket.h
+    model/tcp-syn-flood-factory.h
+    
 )
 
 set(private_header_files)

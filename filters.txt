@@ -1,0 +1,18 @@
+tcp.dstport == 5000
+&& tcp.flags.syn == 1
+&& tcp.flags.ack == 0
+&& (ip.src == 10.1.5.0/24 || ip.src == 10.1.6.0/24)
+
+
+
+tcp.srcport == 5000
+&& tcp.flags.syn == 1
+&& tcp.flags.ack == 1 
+&& (ip.dst == 10.1.5.0/24 || ip.dst == 10.1.6.0/24)
+
+
+tcp.dstport == 5000
+&& tcp.flags.ack == 1
+&& tcp.flags.syn == 0
+&& tcp.flags.reset == 0
+&& (ip.src == 10.1.5.0/24 || ip.src == 10.1.6.0/24)
